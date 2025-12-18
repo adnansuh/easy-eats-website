@@ -117,7 +117,7 @@ export default function Items() {
                   </a>
                 ) : (
                   <a
-                    href="https://chat.whatsapp.com/YOUR_GROUP_LINK"
+                    href="https://chat.whatsapp.com/HzIm2kgBEojErEpkqEbO5Y"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="

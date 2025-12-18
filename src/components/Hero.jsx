@@ -48,7 +48,7 @@ export default function Hero() {
           </p>
 
           <motion.a
-            href="tel:9876543210"
+            href="tel:8075535269"
             whileHover={{ scale: 1.06 }}
             whileTap={{ scale: 0.95 }}
             className="

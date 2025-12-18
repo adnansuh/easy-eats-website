@@ -1,14 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../assets/Typography.png";
 
 const navLinks = [
-  { name: "Home", to: "/#items" },
-  { name: "Services", to: "/#services" },
-  { name: "About", to: "/#about" },
-  { name: "Items", to: "/#items" },
-  { name: "Contact", to: "/#contact" },
+  { name: "Home", href: "#home" },
+  { name: "Items", href: "#items" },
+  { name: "Services", href: "#services" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -30,36 +29,30 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
           {/* LOGO */}
-          <Link to="/" className="flex items-center">
+          <a href="#home" className="flex items-center">
             <img
               src={logo}
               alt="Easy Eats"
               className="h-11 w-auto object-contain"
             />
-          </Link>
+          </a>
 
           {/* DESKTOP LINKS */}
           <div className="hidden md:flex items-center gap-12">
-            {navLinks.map((link) =>
-              link.to.startsWith("/#") ? (
-                <a
-                  key={link.name}
-                  href={link.to.replace("/", "")}
-                  className="nav-link"
-                >
-                  {link.name}
-                </a>
-              ) : (
-                <Link key={link.name} to={link.to} className="nav-link">
-                  {link.name}
-                </Link>
-              )
-            )}
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="nav-link"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
 
           {/* DESKTOP CTA */}
           <a
-            href="tel:9876543210"
+            href="tel:8075535269"
             className="
               hidden md:inline-block
               px-7 py-3 rounded-full font-semibold text-white
@@ -71,14 +64,26 @@ export default function Navbar() {
             Call Now
           </a>
 
-          {/* MOBILE BUTTON */}
+          {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden flex flex-col gap-1.5"
           >
-            <span className={`h-0.5 w-6 bg-gray-800 transition ${open && "rotate-45 translate-y-2"}`} />
-            <span className={`h-0.5 w-6 bg-gray-800 transition ${open && "opacity-0"}`} />
-            <span className={`h-0.5 w-6 bg-gray-800 transition ${open && "-rotate-45 -translate-y-2"}`} />
+            <span
+              className={`h-0.5 w-6 bg-gray-800 transition ${
+                open && "rotate-45 translate-y-2"
+              }`}
+            />
+            <span
+              className={`h-0.5 w-6 bg-gray-800 transition ${
+                open && "opacity-0"
+              }`}
+            />
+            <span
+              className={`h-0.5 w-6 bg-gray-800 transition ${
+                open && "-rotate-45 -translate-y-2"
+              }`}
+            />
           </button>
         </div>
       </motion.nav>
@@ -99,31 +104,20 @@ export default function Navbar() {
             "
           >
             <div className="flex flex-col items-center gap-6 py-8">
-              {navLinks.map((link) =>
-                link.to.startsWith("/#") ? (
-                  <a
-                    key={link.name}
-                    href={link.to.replace("/", "")}
-                    onClick={() => setOpen(false)}
-                    className="text-lg font-medium text-gray-700"
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={link.name}
-                    to={link.to}
-                    onClick={() => setOpen(false)}
-                    className="text-lg font-medium text-gray-700"
-                  >
-                    {link.name}
-                  </Link>
-                )
-              )}
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="text-lg font-medium text-gray-700"
+                >
+                  {link.name}
+                </a>
+              ))}
 
               {/* MOBILE CTA */}
               <a
-                href="tel:9876543210"
+                href="tel:8075535269"
                 className="
                   mt-4 px-8 py-3 rounded-full font-semibold text-white
                   bg-gradient-to-r from-purpleBright to-mint
@@ -137,7 +131,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* LINK STYLE */}
+      {/* LINK STYLES (UNCHANGED) */}
       <style>
         {`
           .nav-link {
