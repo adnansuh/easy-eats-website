@@ -29,7 +29,7 @@ const items = [
 
 export default function Items() {
   return (
-    <section className="relative min-h-screen pt-28 pb-24 overflow-hidden bg-gradient-to-br from-soft via-white to-soft">
+    <section id="items" className="relative min-h-screen pt-28 pb-24 overflow-hidden bg-gradient-to-br from-soft via-white to-soft">
       
       {/* LOGO WATERMARK BACKGROUND */}
       <img

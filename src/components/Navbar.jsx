@@ -4,10 +4,10 @@ import { useState } from "react";
 import logo from "../assets/Typography.png";
 
 const navLinks = [
-  { name: "Home", to: "/" },
+  { name: "Home", to: "/#items" },
   { name: "Services", to: "/#services" },
   { name: "About", to: "/#about" },
-  { name: "Items", to: "/items" },
+  { name: "Items", to: "/#items" },
   { name: "Contact", to: "/#contact" },
 ];
 
