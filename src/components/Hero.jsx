@@ -44,7 +44,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-600 max-w-lg mb-8 text-lg">
-            Chicken • Mutton • beef  • fish • Delivered fresh to your doorstep
+            Chicken • Mutton • Beef  • Fish • Delivered fresh to your doorstep
           </p>
 
           <motion.a
