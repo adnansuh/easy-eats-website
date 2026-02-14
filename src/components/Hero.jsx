@@ -40,11 +40,12 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-5xl md:text-6xl font-extrabold text-teal mb-6 leading-tight">
-            Delivering Happiness <br /> To Your Home
+            Fresh Chicken, Beef, Mutton & Fish <br />Delivery in Kochi
           </h1>
 
           <p className="text-gray-600 max-w-lg mb-8 text-lg">
-           Fresh Chicken, Beef, Mutton & Fish Delivery in Kochi
+            Delivering Happiness to your Home
+           
           </p>
 
           <motion.a
